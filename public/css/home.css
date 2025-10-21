@@ -1,0 +1,310 @@
+:root {
+    /* Primary Brand */
+    --color-primary: #020200;
+    --color-primary-light: #1a1a1a;
+    --color-primary-dark: #000000;
+
+    --color-secondary: #800000;
+    --color-secondary-light: #a52a2a;
+    --color-secondary-dark: #4b0000;
+
+    --color-accent: #ffd700;
+    --color-accent-light: #face3d;
+    --color-accent-white: #ffd6b5;
+    --color-accent-dark: #fd7200;
+
+    /* Text */
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #e0e0e0;
+    --color-text-muted: #a0a0a0;
+    --color-text-dark: #1c1c1c;
+
+    /* Grayscale */
+    --color-gray-50: #fafafa;
+    --color-gray-100: #f8f9fa;
+    --color-gray-200: #e9ecef;
+    --color-gray-800: #343a40;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--color-gray-50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.left {
+    width: 65%;
+    height: 100vh;
+    background: url("/images/UPDATED WEBSITE UI.png") no-repeat center center;
+    background-size: cover;
+    background-position: center left;
+    color: var(--color-text-primary);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.left img.logo {
+    width: 120px;
+    margin-bottom: 1rem;
+    z-index: 2;
+}
+
+.left h2 {
+    font-size: 1rem;
+    text-align: left;
+    font-weight: normal;
+    z-index: 2;
+}
+
+.phoenix {
+    position: absolute;
+    right: -80px;
+    width: 400px;
+    top: 20%;
+    z-index: 0;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.login-box {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 50px;
+    width: 320px;
+    text-align: center;
+    box-shadow: inset 0 0 30px 2px rgba(203, 177, 254, 1);
+    position: relative;
+    /* Needed for absolute positioning of h3 */
+}
+
+.login-box h3 {
+    margin-bottom: 1.5rem;
+    color: var(--color-text-dark);
+    text-align: left;
+    /* Align text to left */
+    position: absolute;
+    /* Position absolutely inside .login-box */
+    top: -2.8rem;
+    /* Same as .login-box padding */
+    left: 0.1rem;
+    /* Same as .login-box padding */
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.input-group input {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 30px;
+    background: var(--color-gray-800);
+    color: var(--color-text-primary);
+    font-size: 0.9rem;
+    display: block;
+}
+
+.input-group input::placeholder {
+    color: var(--color-text-muted);
+}
+
+.input-group .toggle-password {
+    position: absolute;
+    right: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--color-text-primary);
+}
+
+.forgot {
+    display: block;
+    text-align: right;
+    font-size: 0.8rem;
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+    text-decoration: none;
+}
+
+#submitBtn {
+    width: 25%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 50px;
+    background: var(--color-accent-dark);
+    color: var(--color-text-primary);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+    margin: 1.5rem auto 0 auto;
+    display: block;
+}
+
+#submitBtn:hover {
+    background: var(--color-secondary-dark);
+    box-shadow: 0 4px 16px -4px var(--color-secondary-light);
+    color: var(--color-accent);
+}
+
+/* Shared action button style for visible buttons */
+.action-btn {
+    width: 25%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 50px;
+    background: var(--color-accent-dark);
+    color: var(--color-text-primary);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+    margin: 1.5rem auto 0 auto;
+    display: block;
+}
+
+.action-btn:hover {
+    background: var(--color-secondary-dark);
+    box-shadow: 0 4px 16px -4px var(--color-secondary-light);
+    color: var(--color-accent);
+}
+
+/* ...existing code... */
+.create-account {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.create-account a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.create-account a:hover {
+    color: var(--color-accent);
+}
+
+/* Center admin link at bottom */
+.admin-link {
+    position: absolute;
+    left: 65%;
+    bottom: 35px;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.admin-link a {
+    text-decoration: none;
+    color: blue;
+    font-weight: 800;
+    font-size: medium;
+    transition: color 0.3s ease;
+}
+
+.admin-link a:hover {
+    color: var(--color-accent);
+}
+
+/* Position other links at bottom right */
+.other-links {
+    position: absolute;
+    right: 30px;
+    bottom: 40px;
+    display: flex;
+    gap: 15px;
+    font-size: 0.9rem;
+}
+
+.other-links a {
+    color: var(--color-primary-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.other-links a:hover {
+    color: var(--color-accent);
+}
+
+.other-links span {
+    color: var(--color-text-muted);
+}
+
+.bottom-left-row {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    z-index: 2;
+}
+
+.bottom-left-images {
+    display: flex;
+    gap: 10px;
+}
+
+.bottom-left-images img {
+    object-fit: contain;
+    display: block;
+}
+
+.bottom-left-images img[alt="VITS"] {
+    height: 93px;
+    /* Mas mataas ang VITS */
+    width: 110px;
+    object-fit: contain;
+    display: block;
+}
+
+.bottom-left-images img[alt="PLV"] {
+    height: 90px;
+    /* Mas mababa ang PLV */
+    width: 110px;
+    object-fit: contain;
+    display: block;
+}
+
+.bottom-left-title {
+    color: var(--color-text-primary);
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0;
+    text-align: left;
+    letter-spacing: 1px;
+}

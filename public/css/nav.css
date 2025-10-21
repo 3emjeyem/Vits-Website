@@ -1,0 +1,102 @@
+/* public/css/nav.css */
+:root {
+    --nav-bg: #ffffff; /* Background color */
+    --nav-text: #000000; /* Default text color */
+    --nav-hover: #ff6600; /* Hover or active color */
+    --nav-icon: #000000; /* Icon color */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation bar container */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--nav-bg);
+    padding: 10px 30px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Left section (search icon) */
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left .search {
+    background: #ddd;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 150px;
+}
+
+/* Center section (menu links) */
+.nav-center {
+    position: relative;
+}
+
+.nav-center ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 25px;
+    box-shadow: 0 8px 40px -8px rgba(0, 0, 0, 0.25);
+}
+
+.nav-center ul li a {
+    text-decoration: none;
+    color: var(--nav-text);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-center ul li a:hover,
+.nav-center ul li a.active {
+    color: var(--nav-hover);
+}
+
+.nav-center img[alt="shadow"] {
+    position: absolute;
+    left: 50%;
+    bottom: -105px;
+    transform: translateX(-50%);
+    width: 150%;
+    height: 170px;
+    opacity: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Right section (icons) */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-right i {
+    font-size: 18px;
+    color: var(--nav-icon);
+    cursor: pointer;
+}
+
+.navbar-design-rect {
+    position: absolute;
+    /* Move it ABOVE the menu. Adjust the negative value as needed. */
+    top: -10px;
+    height: 6px;
+    background: #ff6600;
+    border-radius: 3px;
+    transition: left 0.3s ease, width 0.3s ease;
+    z-index: 20;
+    /* TEMPORARILY REMOVE: display: none; */
+    /* Set a default width/left so it's visible if JS fails */
+    width: 20px; /* Example visible size */
+    left: 0;
+}
